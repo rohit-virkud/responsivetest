@@ -16,6 +16,10 @@
     		font-family: 'Lato', sans-serif;
 			
     	}
+    	a{
+    		 color: inherit; 
+    		 text-decoration: none;
+    	}
     	body
     	{
     		background: #07242E;
@@ -226,9 +230,9 @@
         .headline
     	{
 
-		  width: min(48vw, 87vh); 
+		  width: min(48vw, 24vh); 
 		  margin-top: min(7.299vw, 4vh);
-		  font-size: min(6vw, 3.2vh);
+		  font-size: min(6vw, 2.2vh);
 		  color:#fff;
 		  font-weight: 900;
 		  letter-spacing: 0.1em;
@@ -287,7 +291,7 @@
 		  height: auto;
 		  margin-left: 3.163vw;
 		  color: hsla(0, 0.00%, 100.00%, 1.00);
-		  font-size: min(4vw, 1.3vh);
+		  font-size: min(4vw, 1.4vh);
 		  line-height:min(4.866vw,2.4vh);
 		  letter-spacing: 0.1em;
 		  font-weight: 300;
@@ -358,7 +362,7 @@
 		  justify-content: center;
 		  align-items: center;
 		  border-top-style: solid;
-		  border-top-width: 0.73vw;
+		  border-top-width:0.73vw,;
 		  border-top-color: hsla(0, 0.00%, 100.00%, 1.00);
 		  border-right-style: solid;
 		  border-right-width: 0.73vw;
@@ -417,11 +421,16 @@
 			object-fit: contain;
         	max-width: 100%;
 			max-height: 100%;
+			
         }
         .cover-image img
         {
              width: 100%;
-             height: 60vw
+             height: 60vw;
+
+             background-size:cover;
+             background-position: center;
+
         }
 
 		/*social media*/
@@ -599,11 +608,13 @@
 		}
 		.round
 		{
+			max-width: 87vw;
+			flex: 1 0 35vw; /* The important bit. This percentage decides your columns. 
+			The percent can be px. It just represents your minimum starting width.
+			flex grow | flex shrink | flex basis*/
+			margin: 5px;
 			
-			flex: 1 0 35vw; 
-			max-width: 40vw;
-			margin: 3vw 0vw;
-			height: 29vw;
+			height: 20vw;
 			overflow: hidden;
 			display: flex;
 			align-items: center;
@@ -615,7 +626,7 @@
 		{
 			object-fit: contain;
 			max-width: 100%;
-			max-height: 100%;
+			max-height: 20vw;
 	
 		}
 
@@ -692,7 +703,7 @@
 			<!-- contact-information -->
 			<div class="para-description">
           
-				<a class="contact-section">
+				<a href="tel:+30 6936503000" class="contact-section">
 					<div class="icon-container">
 					   <img src="phone.png" class="phone-img">
 				  </div>
@@ -700,7 +711,7 @@
 				</a>
 	  
 	  
-				<a class="contact-section mg-top-less">
+				<a href="tel:+30 6936503000" class="contact-section mg-top-less">
 					<div class="icon-container">
 					   <img src="home.png" class="home-img">
 				  </div>
@@ -708,7 +719,7 @@
 				</a>
 	  
 				
-				<a class="contact-section mg-top-less">
+				<a href="mailto:info@artcoolcards.gr" class="contact-section mg-top-less">
 					<div class="icon-container">
 					   <img src="msg.png" class="msg-img">
 				  </div>
@@ -716,14 +727,14 @@
 				</a>
 	  
 	  
-				<a class="contact-section mg-top-less">
+				<a href="https://g.co/kgs/ZyJHZv" class="contact-section mg-top-less">
 					<div class="icon-container">
 					   <img src="location.png" class="location-img">
 				  </div>
-				  <p class="txt">Lisikratous 88, Kallithea, 17674 Athens, Greece</p>
+				  <p  class="txt">Lisikratous 88, Kallithea, 17674 Athens, Greece</p>
 				</a>
 	  
-				<a  class="contact-section mg-top-less">
+				<a href="https://www.artcoolcards.gr/" class="contact-section mg-top-less">
 					<div class="icon-container">
 					   <img src="world.png" class="web-img">
 				  </div>
@@ -736,14 +747,14 @@
 			  <!-- Share & Contact Buttons -->
 			  <div class="big-icons">
 	    	
-				<a class="big-icon-text-container">
+				<a href="#save" class="big-icon-text-container">
 					<div class="big-icon-holder">
 						<img src="contact.png" class="contact-image">
 					</div>
 					<p class="text-block">Save My Contact</p>
 				</a>
 	
-				<a class="big-icon-text-container" style="margin-left: 30px;">
+				<a href="#share" class="big-icon-text-container" style="margin-left: 30px;">
 					<div class="big-icon-holder">
 						<img src="share.png" class="share-icon">
 					</div>
