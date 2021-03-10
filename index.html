@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medico Template | @rohit_virkud</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+	/*basic styles*/
+     *{
+    		margin: 0;
+    		padding: 0;
+    		box-sizing: border-box;
+    		font-family: 'Lato', sans-serif;
+			
+    	}
+    	body
+    	{
+    		background: #07242E;
+ 		    color: white;
+    	}
+		textarea, input { outline: none; }
+		
+    
+
+	/*small elements to animate*/
+	.hero-wrapper
+    	{
+    		width: 100vw;
+		    min-height: 100vh;
+    		display: flex;
+    		justify-content: center;
+    		position: sticky;
+    		top: 0;
+
+    	}
+	.background-img
+    	{
+    		width: 60vw;
+    		height: 100vh;
+    		right: 0%;
+    		position: absolute;
+    	}
+    	.circle-one, .circle-two
+    	{
+    		position: absolute;
+    		right: 0vw;
+    	}
+    	.circle-one
+    	{
+    		top:min(3vw,1.5vh);
+    		right: 30vw;
+    		width: 7.299vw;
+    		height: 6.326vw;
+    		-webkit-animation: rotation 5s infinite linear;
+    	}
+    	.circle-two
+        {
+        	top: 90vw;
+        	width: min(10.462vw, 5vh);
+        	height: min(9.246vw, 4vh);
+		right:2vw;
+        	-webkit-animation: rotationReverse 7s infinite linear;
+        }
+        .cross-one{
+            width: min(3.65vw, 1.5vh);
+            height: min(3.65vw, 1.2vh);
+            top: min(80vw,40vh);
+            right: 30vw;
+            position: absolute;
+           
+           animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+           
+        }
+        .cross-two{
+            width: min(4.866vw, 2.5vh);
+            height: min(4.866vw, 2.2vh);
+            top: min(58vw,24vh);
+            right: 7vw;
+            position: absolute;
+            -webkit-animation: rotation 20s infinite linear;
+
+        }
+        .one-two-three
+        {
+        	position: absolute;
+        	width: min(29.197vw,14vh);
+        	height: min(1.946vw,0.5vh);
+            top: min(35vw,17vh);
+            right: 8%;
+			opacity: 40%;
+        }
+
+
+        @-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+         }
+
+
+         @-webkit-keyframes rotationReverse {
+		from {
+				-webkit-transform: rotate(359deg);
+		}
+		to {
+				-webkit-transform: rotate(0deg);
+		}
+        }
+         @keyframes blink-animation 
+		{
+        to {
+          opacity: 0;
+        }
+        }
+      @-webkit-keyframes blink-animation 
+	  {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* animation */
+      
+      .arrow {
+		position: absolute;
+		text-align: center;
+		right: 3vw;
+		top: min(150vw,80vh);
+		font-size: min(2.433vw,1.2vh);
+	}
+     .arrow img{
+		width: min(2.5vw,1.2vh);
+	}
+    .bounce 
+    {
+  
+  		animation: bounce 2s infinite;
+	}
+
+@keyframes bounce 
+{
+    
+  0%, 20%, 50%, 80%, 100% 
+	{
+    transform: translateY(0);
+    }
+  40% 
+   {
+    transform: translateY(-7.299vw);
+   }
+  60% 
+   {
+    transform: translateY(-3.65vw);
+   }
+} 
+
+
+/*hero container*/
+
+    .hero-container
+    	{ 
+           width: 87vw;
+		   height: 100vh;
+    	   
+    	}
+
+
+
+/*profile-picture*/		
+		.logo-container
+    	{
+    		 width: 100%;	 
+    	}
+		.brand-logo
+    	{ 
+		  display: flex; 
+		  overflow: hidden;
+		  width: min(36vw, 20vh);
+		  height: min(36vw, 20vh);
+		  margin-top: min(3.433vw,1.2vh);
+		  justify-content: center;
+		  align-items: center;
+		  border-top-style: solid;
+		  border-top-width: 0.73vw;
+		  border-top-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-right-style: solid;
+		  border-right-width: 0.73vw;
+		  border-right-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-bottom-style: solid;
+		  border-bottom-width: 0.73vw;
+		  border-bottom-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-left-style: solid;
+		  border-left-width: 0.73vw;
+		  border-left-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-top-left-radius: 84%;
+		  border-top-right-radius: 84%;
+		  border-bottom-left-radius: 84%;
+		  border-bottom-right-radius: 84%;
+		  background-color: hsla(183.8709677419355, 87.15%, 48.82%, 1.00);
+		  color: hsla(183.8709677419355, 0.00%, 100.00%, 1.00);
+		  filter: drop-shadow(0vw 2.433vw 8.516vw rgba(23, 181, 240, 0.431));
+
+    	}
+		
+		.logo-img
+		{
+			
+			max-width: min(40vw, 18vh);
+			max-height: min(40vw, 18vh);
+			object-fit: cover;
+            object-position: center;
+			/* test a bit */
+			/*max-height: 100%;*/
+			
+		}
+		
+
+/*headline*/
+        .headline
+    	{
+
+		  width: min(48vw, 87vh); 
+		  margin-top: min(7.299vw, 4vh);
+		  font-size: min(6vw, 3.2vh);
+		  color:#fff;
+		  font-weight: 900;
+		  letter-spacing: 0.1em;
+		  margin-left: 2.433vw;
+
+    	}
+        .tag
+    	{
+    	  width: min(72vw, 131vh);
+		  color: #fff;
+		  font-size: min(3vw, 1.5vh);
+		  font-weight: 400;
+		  letter-spacing: 0.1em;
+		  margin-top: min(1.946vw,0.9vh);
+		  margin-left: 2.433vw;
+    	}
+
+
+		/* contact information*/
+		.para-description
+    	{
+    		width: 100%;
+    	}
+    	.contact-container
+    	{
+    		margin-left: min(2.433vw, 4.3794vh);
+    	}
+        
+        .contact-section{
+		  display: flex;
+		  margin-top: min(13.732vw,4.5vh);
+		  justify-content: flex-start;
+		  align-items: center;
+		  margin-left: 2.433vw;
+		}
+		.icon-container
+		{
+			
+		  display: flex;
+		  width: min(7.299vw, 3.6vh);
+		  height: min(7.299vw, 3.6vh);
+		  justify-content: center;
+		  align-items: center;
+		  border-top-left-radius: 50%;
+		  border-top-right-radius: 50%;
+		  border-bottom-left-radius: 50%;
+		  border-bottom-right-radius: 50%;
+		  background-color: hsla(183.8709677419355, 87.15%, 48.82%, 1.00);
+		  filter: drop-shadow(0vw 1.217vw 4.866vw rgba(13, 157, 227, 0.38));
+
+		}
+		.txt
+		{
+		  overflow: visible;
+		  width: min(60.827vw,30.4vh);
+		  height: auto;
+		  margin-left: 3.163vw;
+		  color: hsla(0, 0.00%, 100.00%, 1.00);
+		  font-size: min(4vw, 1.3vh);
+		  line-height:min(4.866vw,2.4vh);
+		  letter-spacing: 0.1em;
+		  font-weight: 300;
+		  column-count: auto;
+		  color: #DBFCFE;
+
+		}
+		.phone-img
+		{
+			width: min(3.65vw, 1.8vh);
+			height: min(3.65vw, 1.8vh);
+		}
+		.home-img
+		{
+			width: min(4.38vw, 2.1vh);
+	        height: min(3.406vw, 1.5vh);
+		}
+		.msg-img
+		{
+			width: min(3.65vw, 1.5vh);
+			height: min(2.92vw, 1.2vh);
+		}
+		.location-img
+		{
+			width: min(3.3vw, 1.6vh);
+			height: min(3.75vw, 1.6vh);
+			padding-right: 0.2vw;
+		}
+		.web-img
+		{
+			width: min(4.38vw,2.5vh);
+			height: min(4.38vw, 2.5vh);
+
+		}
+		.mg-top-less
+		{
+			 margin-top: min(4.866vw,2.4vh);
+		}
+
+
+		/* contact & share icons */
+		.big-icons
+		{
+		  display: flex;
+		  position: fixed;
+	      width: 87%;
+	      bottom: 30px;
+	      height: auto;
+          justify-content: center;
+          align-items: center;
+        }
+        .big-icon-text-container
+        {
+
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+
+        }
+        .big-icon-holder
+        {
+        	
+		  display: flex;
+		  width: min(12vw,6vh);
+		  height: min(12vw,6vh);
+
+		  justify-content: center;
+		  align-items: center;
+		  border-top-style: solid;
+		  border-top-width: 0.73vw;
+		  border-top-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-right-style: solid;
+		  border-right-width: 0.73vw;
+		  border-right-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-bottom-style: solid;
+		  border-bottom-width: 0.73vw;
+		  border-bottom-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-left-style: solid;
+		  border-left-width: 0.73vw;
+		  border-left-color: hsla(0, 0.00%, 100.00%, 1.00);
+		  border-top-left-radius: 50%;
+		  border-top-right-radius: 50%;
+		  border-bottom-left-radius: 50%;
+		  border-bottom-right-radius: 50%;
+		  background-color: hsla(183.8709677419355, 87.15%, 48.82%, 1.00);
+          filter: drop-shadow(0vw 1.217vw 4.866vw rgba(13, 157, 227, 0.361));
+
+
+        }
+        .contact-image
+        {
+
+		
+		  padding-left: 0.973vw;
+		  width: min(6vw,3vh);
+		  height: min(5vw,2.5vh);
+
+        }
+        .share-icon
+        {
+			padding-left: 0.5vw;
+        	width: min(6vw,3vh);
+        	height: min(5vw,2.5vh);
+
+        }
+        .text-block
+        {
+
+		  margin-top: min(2.433vw,1.2vh);
+		  color: hsla(0, 0.00%, 100.00%, 1.00);
+		  font-size: min(2.676vw,1vh);
+		  text-align: center;
+
+        }
+		/*info container*/
+        .info-container
+        {
+        	width: 100%;  
+        	background-color:  #07242E;
+        	position: sticky;
+        	top:0;
+
+        }
+        .cover-image 
+        {
+			object-fit: contain;
+        	max-width: 100%;
+			max-height: 100%;
+        }
+        .cover-image img
+        {
+             width: 100%;
+             height: 60vw
+        }
+
+		/*social media*/
+		.txt-wrapper
+        {
+        	width: 100%;
+        
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	font-family: 'Lato', sans-serif;
+        	
+
+        }
+        .txt-container
+        {
+        	width: 87%;
+        }
+        .text-headline
+        {
+          width: min(60.827vw,30vh);
+		  margin-top: min(7.299vw,3.5vh);
+		  font-size: min(5.353vw,2.5vh);
+		  color: hsla(0, 0.00%, 100.00%, 1.00);
+		  font-weight: 700;
+		  letter-spacing: 0.1em;
+		  margin-left: min(2.433vw,1.5vh);
+		  word-break: break-word;
+		 
+        }
+        .text-para
+        {
+        	width: min(72.993vw,35vh);
+        	margin-top: min(3.5vw,1.3vh);
+		    font-size: min(3.406vw,1.5vh);
+		    color: hsla(0, 0.00%, 100.00%, 1.00);
+		    font-weight: 300;
+		    line-height: min(5.596vw,2vh);
+		    letter-spacing: 0.1em;
+		    margin-left: 2.433vw;
+
+        }
+       .follow-text
+		{
+			font-size: min(5.333vw,2.5vh);
+			margin-top: min(12.8vw,6.4vh);
+			margin-left: 2.933vw;
+			letter-spacing: 0.1em;
+		}
+
+		
+		.icon-group
+		{
+			margin-top: min(4.866vw,2.433vh);
+			margin-left: 2.676vw;
+			display: flex;
+		}
+		.img-icon
+		{
+			width: min(9vw,9vh);
+			height: min(9vw,9vh);
+		}
+		.mg-left-21
+		{
+			margin-left: 3vw;
+		}
+		.review-text
+		{
+			margin-top: min(4.866vw,2.433vh);
+		}
+
+		/* form wrapper */
+
+		.form-wrapper
+		{
+		
+		width: 100%;
+		margin-top: 12.165vw;
+		padding-top: 4.866vw;
+		padding-bottom: 8.516vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		
+
+		}
+		.input-container
+		{
+			display: flex;
+			border-bottom: 0.243vw solid #060606;
+			margin-top: min(4.866vw,2.433vh);
+			margin-left:2.433vw;
+			
+		}
+		.form-container
+		{
+		width: 87%;
+		display: flex;
+		flex-direction: column;
+		}
+
+		.input-text
+		{
+			padding: 2.433vw;
+			margin-top: min(2.433vw,1.2vh);
+			margin-left: 2.433vw;
+			border: none;
+			color: #083855;
+			letter-spacing: 0.1em;
+			width: min(80vw,35vh);
+			font-size: min(3vw,1.5vh);
+			
+		}
+		.input-img-container img
+		{
+			width: 6vw;
+			height: 6vw;
+			margin-top: min(3.65vw,1.5vh);
+			margin-left: 0.73vw;
+		}
+		.input-img-container  .form-msg-img
+		{
+			width: 6.083vw;
+			height: 4.866vw;
+		}
+
+		.input-submit
+		{
+			padding: 2.433vw 4.866vw;
+			margin-top: min(6.083vw,3.04vh);
+			margin-left:2.433vw;
+			border: none;
+			border-radius: 9.732vw;
+			font-weight: 600;
+			color:white;
+			letter-spacing: 0.1em;
+			font-size: min(3.65vw,1.6vh);
+			margin-left: 0;
+			background: linear-gradient(187.32deg, #89DFF9 -17.12%, #05C2FC 94.31%);
+			filter: drop-shadow(0vw 1.217vw 3.65vw rgba(18, 141, 185, 0.349)); 
+		}
+
+
+		/* extra icons */
+		.extra-icons
+		{
+			margin-top: min(7.299vw,3.6vh);
+			padding-bottom: 2.433vw;
+			width: 100%;
+			
+			display: flex;
+			justify-content: center;
+			background-color: #07242E;
+		}
+		.extra-container
+		{
+			width: 87%;
+			font-weight: 700;
+		}
+		.round-icons-wrapper
+		{
+			width: 100%;
+			padding: 10px 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.round-icons-container
+		{
+			display: flex;
+            flex-wrap: wrap;
+			width: 78vw;
+			
+		}
+		.round
+		{
+			
+			flex: 1 0 35vw; 
+			max-width: 40vw;
+			margin: 3vw 0vw;
+			height: 29vw;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			
+		}
+		.round img
+		{
+			object-fit: contain;
+			max-width: 100%;
+			max-height: 100%;
+	
+		}
+
+		/* footer */
+		.footer
+		{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: min(7.299vw,3.6vh);
+			padding-top: 2vw;
+			padding-bottom: 2vw;
+			background-color: white;
+		}
+		.footer-img-container
+		{
+            width: min(15vw,7.5vh);
+			height: min(15vw,7.5vh);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.footer .footer-img-container img{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+
+  
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="hero-wrapper"> 
+	
+		<!--small elements to animate -->
+		<img src="lines for background@2x.png" class="background-img">
+		<img src="circles2@2x.png" class="circle-one">
+		<img src="circles@2x.png" class="circle-two">
+		<img src="cross@2x.png" class="cross-one">
+		<img src="cross2@2x.png" class="cross-two">
+		<img src="1234567890@2x.png" class="one-two-three">
+		<!--scroll down animation  -->
+		<div class="arrow bounce">
+		<p style="transform: rotate(-90deg);">scroll down</p>
+		<img src="arrow.png" style="margin-top: 7.299vw;margin-left: 1.217vw;">
+		</div>
+
+		<!-- hero section container  -->
+		<div class="hero-container">
+        
+
+			<!-- Logo  -->
+			<div class="logo-container">
+				   <a href="#logo" class="brand-logo"> 
+					   <img src="logo.png" class="logo-img">		   
+				   </a>
+			</div>
+
+
+			<!-- headline & tag --->
+			<div class="name-container">
+				<h1 class="headline">Elena Papadopoulou</h1>
+				<p class="tag">General Clinic</p>
+			</div> 
+
+
+			<!-- contact-information -->
+			<div class="para-description">
+          
+				<a class="contact-section">
+					<div class="icon-container">
+					   <img src="phone.png" class="phone-img">
+				  </div>
+				  <p class="txt">+30 6936503000</p>
+				</a>
+	  
+	  
+				<a class="contact-section mg-top-less">
+					<div class="icon-container">
+					   <img src="home.png" class="home-img">
+				  </div>
+				  <p class="txt">+30 6936503000</p>
+				</a>
+	  
+				
+				<a class="contact-section mg-top-less">
+					<div class="icon-container">
+					   <img src="msg.png" class="msg-img">
+				  </div>
+				  <p class="txt">info@artcoolcards.gr</p>
+				</a>
+	  
+	  
+				<a class="contact-section mg-top-less">
+					<div class="icon-container">
+					   <img src="location.png" class="location-img">
+				  </div>
+				  <p class="txt">Lisikratous 88, Kallithea, 17674 Athens, Greece</p>
+				</a>
+	  
+				<a  class="contact-section mg-top-less">
+					<div class="icon-container">
+					   <img src="world.png" class="web-img">
+				  </div>
+				  <p class="txt">www.artcoolcards.gr</p>
+				</a>
+	  
+			  </div>
+
+
+			  <!-- Share & Contact Buttons -->
+			  <div class="big-icons">
+	    	
+				<a class="big-icon-text-container">
+					<div class="big-icon-holder">
+						<img src="contact.png" class="contact-image">
+					</div>
+					<p class="text-block">Save My Contact</p>
+				</a>
+	
+				<a class="big-icon-text-container" style="margin-left: 30px;">
+					<div class="big-icon-holder">
+						<img src="share.png" class="share-icon">
+					</div>
+					<p class="text-block">Share My Contact</p>
+				</a>
+	
+			</div>
+
+
+	    </div> <!-- end of hero container --->
+
+    </div> <!-- end of hero wrapper --->
+
+
+
+
+
+
+	<div class="info-container">
+ 	
+		<!-- cover image --->
+		<a class="cover-image">
+			<img src="cover.png" class="cover">
+		</a>
+
+
+		<!-- social media -->
+		<div class="txt-wrapper">
+ 		
+			<div class="txt-container">
+				<h1 class="text-headline">ΥΠΗΡΕΣΙΕΣ</h1>
+				<p class="text-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis doloreeum iriure dolor in hendrerit in .</p>
+   
+			   
+				<h1 class="follow-text">FOLLOW US</h1> 
+				   <div class="icon-group">
+					   <a href="#"><img src="color@2x.png" class="img-icon"></a>
+					   <a href="#"><img src="color.png" class="img-icon mg-left-21"></a>
+					   <a href="#"><img src="colytor.png" class="img-icon mg-left-21"></a>
+					   <a href="#"><img src="twitter.png" class="img-icon mg-left-21"></a>
+					   <a href="#"><img src="linkedin.png" class="img-icon mg-left-21"></a>
+					   <a href="#"><img src="telegram.png" class="img-icon mg-left-21"></a>
+					   <a href="#"><img src="tiktok.png" class="img-icon mg-left-21"></a>
+				   </div>  
+   
+   
+				   <h1 class="follow-text review-text">OUR REVIEWS</h1> 
+				   <div class="icon-group mg-down-25">
+					   <a href="#"><img src="Tripadvisor.png" class="img-icon"></a>
+					   <a href="#"><img src="bookingcom.png" class="img-icon mg-left-21"></a>
+				   </div>
+			</div>
+		</div>
+
+
+		<!-- form -->
+		
+		<form class="form-wrapper">
+      
+			<div class="form-container">
+			<h1 class="follow-text review-text" style="color: #0B838B;">SUBSCRIBE</h1>  
+	
+			  <div class="input-container">
+				  <div class="input-img-container">
+				   <img src="Group 319@2x.png" >
+				 </div>
+				<input type="text" name="name" class="input-text" placeholder="User Name">
+			  </div>
+	
+			 
+	
+			 <div class="input-container">
+				  <div class="input-img-container">
+				   <img src="Group 320@2x.png" class="form-msg-img">
+				 </div>
+				<input type="email" name="email" class="input-text" placeholder="E-mail">
+			  </div>
+			 
+			  <div>
+			  <input type="submit" name="" class="input-submit" value="SUBMIT">
+			  </div>
+			</div>  
+	
+	   </form>
+
+
+	   <div class="extra-icons">
+			<div class="extra-container">
+				<h1 class="follow-text review-text" style="margin-bottom: 0;">
+				ΟΙ ΣΥΝΕΡΓΑΤΕΣ ΜΑΣ</h1> 
+			
+			<div class="round-icons-wrapper">
+				<div class="round-icons-container">
+					
+					<a class="round">
+						<img src="blue-icon.png" class="extra-icon">
+					</a>
+					<a class="round">
+						<img src="se-icon.png" class="extra-icon">
+					</a>
+				
+				
+					<a class="round">
+						<img src="green-icon.png" class="extra-icon">
+					</a>
+					
+					<a class="round">
+						<img src="yellow-icon.png" class="extra-icon">
+					</a>
+					
+			
+				</div>
+			</div>
+		
+		
+		 
+	 </div>   
+
+    </div>  <!-- info container close -->
+	<div class="footer">
+		<a class="footer-img-container">
+		  <img src="footerlogo.png">
+	    </a>
+	</div>
+		 
+</body>
+</html>
